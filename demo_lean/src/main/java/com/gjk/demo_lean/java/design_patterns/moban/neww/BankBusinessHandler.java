@@ -7,6 +7,7 @@ import org.apache.commons.lang3.RandomUtils;
 
 /**
  * BankBusinessHandler
+ * 基于lambda表达式的模板方法设计模式实现方式1，对外提供具体业务方法，不提供模板方法
  *
  * @author: GJK
  * @date: 2022/3/23 16:57

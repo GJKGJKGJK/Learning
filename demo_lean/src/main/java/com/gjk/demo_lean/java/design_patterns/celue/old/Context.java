@@ -7,6 +7,8 @@ import org.apache.commons.lang3.StringUtils;
 
 /**
  * Context
+ * 不适用lambda表达式的策略模式
+ *
  *
  * @author: GJK
  * @date: 2022/3/29 14:52
@@ -14,13 +16,14 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class Context {
 
+
+
+    //第一种写法 第一种是维护了一个strategies的Map容器。用这种方式就需要判断每种策略是否可以共享使用，它只是作为算法的实现。
     /**
      * 缓存所有的策略，当前是无状态的，可以共享策略类对象
      */
     private static final Map<String, GearStrategy> strategies = new HashMap<>();
 
-
-    //第一种写法 第一种是维护了一个strategies的Map容器。用这种方式就需要判断每种策略是否可以共享使用，它只是作为算法的实现。
     static {
         strategies.put("one", new GearStrategyOne());
         strategies.put("two", new GearStrategyTwo());

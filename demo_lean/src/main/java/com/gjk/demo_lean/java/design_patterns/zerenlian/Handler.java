@@ -1,11 +1,12 @@
 package com.gjk.demo_lean.java.design_patterns.zerenlian;
 
 
-import lombok.Getter;
 import lombok.Setter;
 
 /**
  * Handler
+ *
+ * 责任链模式，抽象父类
  *
  * @author: GJK
  * @date: 2022/4/2 17:40

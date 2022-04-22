@@ -6,6 +6,10 @@ import com.gjk.demo_lean.spring.aop.proxy.RealSubject;
 
 /**
  * CglibProxy
+ *
+ *  Cglib代理实现是通过创建Enhancer对象 + 创建MethodInterceptor实现类 完成的，将Enhancer的superclass属性设置为委托类，Enhancer设置回调函数为MethodInterceptor实现类 ，
+ *  调用Enhancer.create()方法获取代理对象。
+ *
  *   CGlib 采用了FastClass 的机制来实现对被拦截方法的调用。FastClass 机制就是对一个类的方法建立索引，通过索引来直接调用相应的方法
  * @author: GJK
  * @date: 2022/3/31 18:52

@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
  * BizService
  * 某个业务服务类
  *
+ *  基于lambda表达式的策略模式
  *
  * @author: GJK
  * @date: 2022/3/29 15:04
@@ -24,8 +25,10 @@ public class BizService {
     @Autowired
     private BizUnitService bizUnitService;
 
+    /**
+     * 策略实现容器
+     */
     private Map<String, Function<String, String>> checkResultDispatcherComX = new HashMap<>();
-
 
     @PostConstruct
     public void checkResultDispatcherComXInit(){

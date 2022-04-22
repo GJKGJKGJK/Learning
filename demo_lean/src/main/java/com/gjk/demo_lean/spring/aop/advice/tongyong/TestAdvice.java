@@ -17,6 +17,10 @@ import org.springframework.stereotype.Component;
 /**
  * TestAdvice
  *
+ * aop切面实现
+ *
+ * AOP实现是基于JDK动态代理和Cglib动态代理的
+ *
  *
  * Spring5.2.6版本及之前版本执行顺序
  * 正常执行：around_before -> before -> 执行方法  -> after -> afterReturning

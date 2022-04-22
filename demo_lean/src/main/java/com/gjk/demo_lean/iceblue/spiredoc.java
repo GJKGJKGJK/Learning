@@ -13,6 +13,10 @@ import com.spire.doc.FileFormat;
 /**
  * spiredoc
  *
+ * spiredoc-可直接指定doc文件，通过api去修改doc文件内容等，如替换书签，添加水印等
+ * 官网帮助文档链接：https://www.e-iceblue.cn/spiredocforjavaoperating/create-word-document-in-java.html
+ *
+ *
  * @author: gaojiankang
  * @date: 2021/07/28/15:25
  * @description:

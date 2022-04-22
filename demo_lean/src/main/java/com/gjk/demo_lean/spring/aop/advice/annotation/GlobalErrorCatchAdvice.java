@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * GlobalErrorCatchAdvice
+ * 自定义注解+AOP切面
  *
  * @author: GJK
  * @date: 2022/3/31 15:34
@@ -17,6 +18,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class GlobalErrorCatchAdvice {
 
+    /**
+     * 将注解作为切面
+     */
     @Pointcut("@annotation(com.gjk.demo_lean.spring.aop.advice.annotation.GlobalErrorCatch)")
     private void globalCatch(){}
 

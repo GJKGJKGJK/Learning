@@ -5,6 +5,10 @@ import org.apache.commons.lang3.RandomUtils;
 /**
  * AbstractBusinessHandler
  *
+ * 不适用lambda表达式的模板方法设计模式
+ *
+ * 抽象的业务类，不对外提供具体业务实现，对外只提供的模板方法。
+ *
  * @author: GJK
  * @date: 2022/3/23 16:42
  * @description:
@@ -40,8 +44,10 @@ public abstract class AbstractBusinessHandler {
     }
 
 
-//取钱业务的实现类
 
+    /**
+     * 取钱业务的实现类
+     */
     public class DrawMoneyHandler extends AbstractBusinessHandler {
 
         @Override
@@ -55,9 +61,10 @@ public abstract class AbstractBusinessHandler {
     }
 
 
-//理财业务的实现类
-
-    public class MoneyManageHandler extends AbstractBusinessHandler{
+    /**
+     * 理财业务的实现类
+     */
+    public class MoneyManageHandler extends AbstractBusinessHandler {
 
         @Override
 
@@ -70,7 +77,7 @@ public abstract class AbstractBusinessHandler {
     }
 
     /**
-     * 取钱
+     * 存钱业务的实现类
      */
     public static class SaveMoneyHandler extends AbstractBusinessHandler{
         @Override

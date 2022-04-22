@@ -10,6 +10,8 @@ import com.gjk.demo_lean.spring.aop.proxy.Subject;
 /**
  * ProxyFactory
  *
+ * JDK动态代理实现需要接口，通过Proxy.newProxyInstance创建代理对象，通过实现InvocationHandler接口+反射完成代理对象的方法调用
+ *
  * @author: GJK
  * @date: 2022/3/31 17:46
  * @description:
