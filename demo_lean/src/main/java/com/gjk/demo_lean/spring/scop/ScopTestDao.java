@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 @Scope(value = "prototype")
-public class TestDao {
+public class ScopTestDao {
 
 
 }

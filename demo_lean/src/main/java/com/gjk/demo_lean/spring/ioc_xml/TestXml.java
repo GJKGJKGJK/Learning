@@ -13,7 +13,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class TestXml {
 
     public static void main(String[] args) {
-        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:application.xml");
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:xml_test/application.xml");
         System.out.println("context 启动成功");
         MessageService messageService = applicationContext.getBean(MessageService.class);
         String message = messageService.getMessage();

@@ -11,6 +11,7 @@ import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.DeclareParents;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
@@ -38,6 +39,13 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class TestAdvice {
+
+
+    /**
+     * 可在已有老功能中添加新功能，及新功能对象包含了新老功能的方法和属性
+     */
+    @DeclareParents(value = "com.gjk.demo_lean.spring.aop.advice.tongyong.*",defaultImpl = TestService.class)
+    private static IService service;
 
 
     @Pointcut("execution(* com.gjk.demo_lean.spring.aop.advice.tongyong.TestService.eatCarrot())")

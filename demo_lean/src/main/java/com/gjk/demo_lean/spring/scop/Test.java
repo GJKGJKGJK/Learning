@@ -3,6 +3,7 @@ package com.gjk.demo_lean.spring.scop;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.gjk.demo_lean.spring.aop.advice.tongyong.TestService;
 import com.gjk.demo_lean.spring.ioc_xml.MessageService;
 
 /**
@@ -40,13 +41,13 @@ public class Test {
         System.out.println(messageService.getClass().getSimpleName());
 
 
-        TestService testService1 = applicationContext.getBean(TestService.class);
+        ScopTestService testService1 = applicationContext.getBean(ScopTestService.class);
         testService1.sysout();
 
-        TestService testService2 = applicationContext.getBean(TestService.class);
+        ScopTestService testService2 = applicationContext.getBean(ScopTestService.class);
         testService2.sysout();
 
-        TestService testService3 = applicationContext.getBean(TestService.class);
+        ScopTestService testService3 = applicationContext.getBean(ScopTestService.class);
         testService3.sysout();
 
     }

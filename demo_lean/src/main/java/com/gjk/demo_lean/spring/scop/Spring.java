@@ -18,6 +18,6 @@ import org.springframework.context.annotation.ImportResource;
 
 @Configuration
 @ComponentScan("com.gjk.demo_lean.spring.scop")
-@ImportResource("classpath:application.xml")
+@ImportResource("classpath:xml_test/application.xml")
 public class Spring {
 }

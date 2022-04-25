@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-public abstract class TestService {
+public abstract class ScopTestService {
 
 
 
@@ -24,9 +24,9 @@ public abstract class TestService {
 //        return null;
 //    }
 
-    //方式二
+    //方式二 需要将类改为抽象类
     @Lookup
-    public abstract TestDao getTestDao();
+    public abstract ScopTestDao getTestDao();
 
     public void sysout(){
         System.out.println("TestService： " + this.hashCode());
