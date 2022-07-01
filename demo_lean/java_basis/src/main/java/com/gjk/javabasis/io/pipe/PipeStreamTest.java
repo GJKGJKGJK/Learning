@@ -32,7 +32,6 @@ public class PipeStreamTest {
         //E:\GJK\项目材料\znws\外部对接文档\密标系统对接\产品廉政档案密标对接设计文档.doc
         byte[] bytes = Files.readAllBytes(Paths.get("E:\\GJK\\项目材料\\OA\\20220402第三次测评问题.docx"));
         pipedOutputStream.write(bytes);
-
         System.out.println("-=====" + pipedInputStream.toString());
 
 

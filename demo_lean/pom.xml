@@ -9,6 +9,7 @@
         <module>java_basis</module>
         <module>jvm</module>
         <module>spring</module>
+        <module>mybatis</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
