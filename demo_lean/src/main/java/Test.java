@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -16,11 +17,11 @@ import com.alibaba.fastjson.JSON;
 public class Test {
 
     public static void main(String[] args) {
-        Map<Integer,Object[]> map = new HashMap<>();
-        map.put(123, new Object[]{123,"GGG"});
-        System.out.println(JSON.toJSONString(map));
-        Object[] objects = (Object[]) map.get(123);
-        System.out.println(JSON.toJSONString(objects));
+        Map<Integer,String> map = new ConcurrentHashMap<>();
+        for(int i=0;;i++){
+            map.put(i,String.valueOf(i));
+        }
+
 
 
     }
