@@ -3,6 +3,7 @@ package com.gjk.spring;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 import com.gjk.spring.aop.advice.tongyong.IService;
 import com.gjk.spring.aop.advice.tongyong.TestService;
@@ -16,6 +17,7 @@ import com.gjk.spring.aop.advice.tongyong.TestService1;
  * @description:
  */
 @SpringBootApplication
+@EnableAspectJAutoProxy
 public class SprApplication {
 
     public static void main(String[] args) {
