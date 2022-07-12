@@ -20,9 +20,12 @@ public class InterceptorConfig implements WebMvcConfigurer {
     @Resource
     private FristInterceptor fristInterceptor;
 
+    @Resource
+    private SecondInterceptor secondIntercept;
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(fristInterceptor).addPathPatterns("/test/**").excludePathPatterns("/test/login");
+        registry.addInterceptor(secondIntercept).addPathPatterns("/test/**").excludePathPatterns("/test/login");
     }
 }
