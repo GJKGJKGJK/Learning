@@ -17,12 +17,19 @@ import com.alibaba.fastjson.JSON;
 public class Test {
 
     public static void main(String[] args) {
-        Map<Integer,String> map = new ConcurrentHashMap<>();
-        for(int i=0;;i++){
-            map.put(i,String.valueOf(i));
-        }
+        int a =0;
+        do {
+            a=1;
+            if(a!=0){
+                break;
+            }
 
-
+            a=2;
+            if(a!=0){
+                break;
+            }
+        }while (a==0);
+        System.out.println(a);
 
     }
 }
